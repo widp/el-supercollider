@@ -19,7 +19,8 @@ By default emacs-lisp files are installed in
 
 SuperCollider files are put in
 
-`$prefix/share/SuperCollider/Extensions/scel`
+`$prefix/share/SuperCollider/Extensions/scide_scel`
+
 
 The only thing you need to do is loading the sclang interface in your `~/.emacs`:
 
