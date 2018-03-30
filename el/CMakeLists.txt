@@ -15,6 +15,8 @@ endforeach()
 
 set(all_scel_sources ${scel_sources} sclang-vars.el)
 
+install (FILES ${scel_sources} ${CMAKE_CURRENT_BINARY_DIR}/sclang-vars.el
+			DESTINATION share/emacs/site-lisp/SuperCollider)
 if (SC_EL_BYTECOMPILE)
 	find_program(EMACS_EXECUTABLE emacs)
 	if(NOT EMACS_EXECUTABLE)
@@ -37,7 +39,4 @@ if (SC_EL_BYTECOMPILE)
 		install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${el}c
 		DESTINATION share/emacs/site-lisp/SuperCollider)
 	endforeach()
-else()
-	install (FILES ${scel_sources} ${CMAKE_CURRENT_BINARY_DIR}/sclang-vars.el
-			DESTINATION share/emacs/site-lisp/SuperCollider)
 endif()
