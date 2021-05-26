@@ -1,3 +1,5 @@
+Please see https://github.com/supercollider/scel
+
 Scel
 ====
 
